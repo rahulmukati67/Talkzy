@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f9f9f9"
+    tools:context=".PhoneNumberActivity">
+
+    <ImageView
+        android:id="@+id/verify"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/mobile_auth">
+
+    </ImageView>
+
+    <TextView
+        android:id="@+id/text1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/verify"
+        android:layout_centerHorizontal="true"
+        android:paddingTop="15dp"
+        android:text="Verify Your Phone Number"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/otptext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="10dp"
+        android:textColor="#2B2A2A"
+        android:text="Talkzy will send OTP message to verify your number "
+        android:textSize="15sp">
+
+    </TextView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/otptext"
+        android:background="@color/white"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        app:cardCornerRadius="10dp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+
+            <EditText
+                android:id="@+id/PhoneNumber"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/textbox_outline"
+                android:hint="Type Your Number"
+                android:inputType="text"
+                android:textAlignment="center"
+                android:textColorHint="#5A5959"
+                android:textColor="#1C1C1C"
+                android:textSize="20dp">
+
+            </EditText>
+
+            <Button
+                android:layout_width="300dp"
+                android:layout_height="40dp"
+                android:layout_below="@id/PhoneNumber"
+                android:id="@+id/verifybtn"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:background="#3FB644"
+                android:text="SEND OTP"
+                android:textColor="@color/white">
+
+            </Button>
+
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>

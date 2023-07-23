@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+     android:background="#E6E5E5"
+    tools:context=".MainActivity">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/RecyclerView"
+        android:layout_above="@+id/bottommenu"
+        tools:listitem="@layout/row_conversation"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        />
+
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:id="@+id/bottommenu"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        app:compatShadowEnabled="true"
+        app:elevation="10dp"
+        app:itemTextColor="@color/black"
+        app:menu="@menu/menu" />
+
+
+    <!--    <Toolbar-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:id="@+id/toolbar"-->
+<!--        android:titleMarginStart="30dp"-->
+<!--        android:subtitleTextColor="#131313"-->
+<!--        android:background="@drawable/toogleroutline"-->
+<!--        android:title="Talkzy">-->
+
+<!--    </Toolbar>-->
+</RelativeLayout>

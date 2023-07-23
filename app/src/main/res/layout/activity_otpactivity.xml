@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f9f9f9"
+    tools:context=".OTPActivity">
+
+    <ImageView
+        android:id="@+id/verify"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/otp_verify">
+
+    </ImageView>
+
+    <TextView
+        android:id="@+id/text1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/verify"
+        android:layout_centerHorizontal="true"
+        android:paddingTop="15dp"
+        android:text="Verify +7223874126"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/otptext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="10dp"
+        android:text="Enter OTP to verify your number "
+        android:textSize="15sp">
+
+    </TextView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/otptext"
+        android:background="#F4F1F1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        app:cardCornerRadius="10dp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+
+            <com.mukeshsolanki.OtpView
+                android:id="@+id/otp_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:inputType="number"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:itemBackground="@drawable/textbox_outline"
+                android:textAllCaps="true"
+                android:textColor="@color/black"
+                android:focusableInTouchMode="true"
+                app:OtpHideLineWhenFilled="true"
+                app:OtpItemCount="6"
+                app:OtpItemSpacing="6dp"
+                app:OtpLineColor="@color/black"
+                app:OtpState_filled="true"
+                app:OtpViewType="line"
+                />
+<!--            <EditText-->
+<!--                android:id="@+id/otp_edit_text"-->
+<!--                android:layout_width="300dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_centerHorizontal="true"-->
+<!--                android:hint="Enter OTP"-->
+<!--                android:gravity="center"-->
+<!--                android:layout_marginLeft="10dp"-->
+<!--                android:layout_marginTop="10dp"-->
+<!--                android:layout_marginRight="10dp"-->
+<!--                android:inputType="text"-->
+<!--                android:maxLength="6"-->
+<!--                android:imeOptions="actionDone"-->
+<!--                android:textSize="20sp" />-->
+
+            <Button
+                android:layout_width="300dp"
+                android:layout_height="40dp"
+                android:id="@+id/verifybtn"
+                android:layout_below="@id/otp_view"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:background="#3FB644"
+                android:text="Verify"
+                android:layout_marginBottom="15dp"
+                android:textColor="@color/white">
+
+            </Button>
+
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>
